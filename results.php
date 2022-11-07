@@ -103,7 +103,7 @@
 										<option value="tablet">Tablet</option>
 										<option value="drank">Drank</option>
 										<option value="suspensie">Suspensie</option>
-										<option value="vloeistof_voor_infusie">Vloeistof voor infusie</option>
+										<option value="ja">voor injectie of infusie</option>
 										<option>...</option>
 									</select>
 								</div>
@@ -114,6 +114,7 @@
 									<select name = "T_weg" class="form-control ml-2" id="exampleFormControlSelect1">
 										<option value="">Maakt niet uit</option>
 										<option value="oraal">Oraal</option>
+										<option value="rectaal">Rectaal</option>
 										<option value="intraveneus">Intraveneus</option>
 										<option>...</option>
 									</select>
@@ -150,7 +151,9 @@
 
 								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN 
 								FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'
-								AND TOEDIENINGSWEG LIKE '%" .$_tvorm . "%'
+								AND TOEDIENINGSWEG LIKE '%" . $_tvorm . "%'
+								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm .  "%'
+								AND keto LIKE 'n'
 								";
 
 								// run query & get results
