@@ -156,7 +156,26 @@
 								//Fetch resulting rows as an array
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								echo $_keyword;
-								print_r($arrays) ;
+								//print_r($arrays) ;
+								?>
+								<?php if ($result -> num_rows >0): ?>
+									<table>
+										<thead>
+											<tr>
+												<th><?php echo implode('</th><th>', array_keys((current($result)))) ?></th>
+											</tr>
+										</thead>
+										<tbody>
+										<?php foreach($result as $row): array_map('htmlentities', $row); ?>
+											<tr>
+												<td><?php echo 	implode('</td><td>', $row); ?></td>
+											</tr>
+										<?php endforeach; ?>
+										</tbody>
+										<?php endif; ?>
+
+									</table>
+					
 
 							?>
 
