@@ -69,7 +69,7 @@
 								<!-- searchbar-->
 								
 							<div class="input-group">
-								<input name = "drug" type="search" id="search" class="form-control"
+								<input minlength="3" name = "drug" type="search" id="search" class="form-control"
 									style="overflow: hidden; text-overflow: ellipsis;"
 									placeholder="Typ hier de naam van het geneesmiddel (bijv. 'paracetamol')">
 								<span class="input-group-append">

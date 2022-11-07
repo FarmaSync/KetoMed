@@ -1,20 +1,3 @@
-<?php 
-//connect to db
-$servername = "185.224.137.5";
-$username = "u219831890_ketobeheer";
-$password = "Admin_admin1";
-$databaseName = "u219831890_ketomed";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $databaseName);
-// Check connection
-if (!$conn) {
-    echo 'Connection error: ' . mysqli_connect_error(); 
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -86,7 +69,7 @@ if (!$conn) {
 								<!-- searchbar-->
 								
 							<div class="input-group">
-								<input name = "drug" type="search" id="search" class="form-control"
+								<input minlength="3" name = "drug" type="search" id="search" class="form-control"
 									style="overflow: hidden; text-overflow: ellipsis;"
 									placeholder="Typ hier de naam van het geneesmiddel (bijv. 'paracetamol')">
 								<span class="input-group-append">
