@@ -148,7 +148,10 @@
 								$_UR = $_GET["UR"];
 								$_ethanol = $_GET["ethanol"];
 
-								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'";
+								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN 
+								FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'
+								AND TOEDIENINGSWEG LIKE '%" .$_tvorm . "%'
+								";
 
 								// run query & get results
 								$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
@@ -159,7 +162,7 @@
 								//print_r($arrays) ;
 								?>
 								<?php if ($result -> num_rows >0): ?>
-									<table>
+									<table class="">
 										<thead>
 											<tr>
 												<th><?php echo implode('</th><th>', array_keys((current($result)))) ?></th>
