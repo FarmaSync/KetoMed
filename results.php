@@ -149,13 +149,10 @@
 								$_UR = $_GET["UR"];
 								$_ethanol = $_GET["ethanol"];
 
-								//$sql = "SELECT * FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'";
-								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN 
-								FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
-								AND TOEDIENINGSWEG LIKE '%" . $_tvorm . "%'
-								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm .  "%'
-								AND keto NOT LIKE 'n'
+								$sql = "SELECT * FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
+								AND T_weg LIKE '%" . $_tvorm ."%'
 								";
+
 
 								// run query & get results
 								$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
