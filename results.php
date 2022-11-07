@@ -149,7 +149,7 @@
 								$_ethanol = $_GET["ethanol"];
 
 								$sql = "SELECT * FROM 'u219831890_ketomed'
-								WHERE PRODUCTNAAM LIKE '%" . $_keyword .  "%'";
+								WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'";
 
 								// run query & get results
 								$result = mysqli_query($conn, $sql);
