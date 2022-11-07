@@ -30,10 +30,6 @@
 
 <body>
 	<!--Connect to database-->
-	<?php
-		include "connect.php"
-	?>
-
 	<!-- header -->
 	<header class="banner overlay bg-cover" data-background="images/banner.jpg">
 		<nav class="navbar navbar-expand-md navbar-dark">
@@ -143,6 +139,17 @@
 				<div class="col-12">
 					<div class="section px-3 bg-white shadow text-center">
 						<h2 class="mb-4">Resultaten</h2>
+						<div id="results">
+							<?php 
+								include "connect.php";
+								$_keyword = $_GET["drug"];
+								echo $_keyword;
+							?>
+
+
+
+						</div>
+
 					</div>
 				</div>
 			</div>

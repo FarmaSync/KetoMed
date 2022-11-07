@@ -5,15 +5,12 @@ $username = "u219831890_ketobeheer";
 $password = "Admin_admin1";
 $databaseName = "u219831890_ketomed";
 
-echo "Hello world";
-
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $databaseName);
 // Check connection
 if (!$conn) {
     echo 'Connection error: ' . mysqli_connect_error(); 
 }
-
 ?>
 
 
@@ -54,7 +51,7 @@ if (!$conn) {
 	<header class="banner overlay bg-cover" data-background="images/banner.jpg">
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
-				<a class="navbar-brand px-2" href="index.html">KetoMed</a>
+				<a class="navbar-brand px-2" href="index.php">KetoMed</a>
 				<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
 					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -63,7 +60,7 @@ if (!$conn) {
 				<div class="collapse navbar-collapse text-center" id="navigation">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link text-dark" href="index.html">Home</a>
+							<a class="nav-link text-dark" href="index.php">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark" href="faq.html">Faq</a>
@@ -85,7 +82,7 @@ if (!$conn) {
 						<p class="text-white mb-4">Voor welk geneesmiddel zoekt u een KetoProof preparaat?</p>
 						<div class="position-relative">
 						
-							<form id="main_form" method="GET" action="results.html">
+							<form id="main_form" method="GET" action="results.php">
 								<!-- searchbar-->
 								
 							<div class="input-group">
