@@ -156,7 +156,7 @@
 
 								//Fetch resulting rows as an array
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
+								echo $_keyword;
 								print_r($arrays);
 
 							?>
