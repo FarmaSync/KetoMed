@@ -152,7 +152,7 @@
 								$sql = "SELECT * FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
 								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm ."%'
-								AND keto NOT LIKE 'N'
+								AND keto LIKE ''
 								";
 
 
