@@ -150,7 +150,7 @@
 								$_ethanol = $_GET["ethanol"];
 
 								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN
-								FROM cbg_labeled_20221107 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
+								FROM cbg_labeled_20221107_b WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
 								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm ."%'
 								AND keto is NULL
