@@ -148,8 +148,7 @@
 								$_UR = $_GET["UR"];
 								$_ethanol = $_GET["ethanol"];
 
-								$sql = "SELECT * FROM 'cbg_labeled_20221105'
-								WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'";
+								$sql = "SELECT * FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword .  "%'";
 
 								// run query & get results
 								$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
