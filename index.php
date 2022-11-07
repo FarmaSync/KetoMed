@@ -31,11 +31,25 @@ mysqli_free_result($result);
 
 // close connection
 mysqli_close($conn);
-
-print_r($arrays);
-
-
+//print_r($arrays);
 
 ?>
 
+<!DOCTYPE html>
+<html>
+    <h4>Resultaten:</h4>
+    <div class="container">
+        <?php foreach($arrays as $array){?>
+            <div class="col s6 md3">
+                <div class="card z-depth-0">
+                    <div class="card-content center">
+                        <h6><?php echo htmlspecialchars($array['PRODUCTNAAM']);?></h6>
+                        <div> <?php echo htmlspecialchars($array['HULPSTOFFEN']);?> </div>
+                    </div>
+                </div>
+            </div>
+
+        <?php } ?>
+    </div>
+</html>
 
