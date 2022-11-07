@@ -150,7 +150,7 @@
 								$_ethanol = $_GET["ethanol"];
 
 								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN
-								FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
+								FROM cbg_labeled_20221107 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
 								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm ."%'
 								AND keto is NULL
@@ -179,7 +179,7 @@
 										<tbody>
 										<?php foreach($result as $row): array_map('htmlentities', $row); ?>
 											<tr>
-												<td href='www.google.com'><?php echo 	implode('</td><td>', $row); ?></td>
+												<td ><?php echo implode('</td><td>', $row); ?></td>
 											</tr>
 										<?php endforeach; ?>
 										</tbody>
