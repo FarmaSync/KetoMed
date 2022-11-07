@@ -179,7 +179,7 @@
 										<tbody>
 										<?php foreach($result as $row): array_map('htmlentities', $row); ?>
 											<tr>
-												<td><?php echo 	implode('</td><td>', $row); ?></td>
+												<td href='www.google.com'><?php echo 	implode('</td><td>', $row); ?></td>
 											</tr>
 										<?php endforeach; ?>
 										</tbody>
