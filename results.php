@@ -143,7 +143,15 @@
 							<?php 
 								include "connect.php";
 								$_keyword = $_GET["drug"];
+								$_tvorm = $_GET["T_weg"];
+								$_fvorm = $_GET["F_vorm"];
+								$_UR = $_GET["UR"];
+								$_ethanol = $_GET["ethanol"];
 								echo $_keyword;
+								echo $_tvorm;
+								echo $_fvorm;
+								echo $_UR;
+								echo $_ethanol;
 							?>
 
 
