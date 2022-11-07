@@ -150,7 +150,7 @@
 								$_ethanol = $_GET["ethanol"];
 
 								$sql = "SELECT * FROM cbg_labeled_20221105 WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
-								AND T_weg LIKE '%" . $_tvorm ."%'
+								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								";
 
 
