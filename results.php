@@ -82,7 +82,7 @@
 								
 								<!-- Uitsluitend recept-->
 								<div class="form-check-inline text-white mt-3">
-									<input name = "UR" class="form-check-input" type="checkbox" value="ja" id="uitsluitend_recept">
+									<input name = "UR" class="form-check-input" type="checkbox" value="ja" id="Uitsluitend recept">
 									<label class="form-check-label" for="uitsluitend_recept">
 										Uitsluitend recept
 									</label>
@@ -154,6 +154,7 @@
 								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm ."%'
 								AND keto is NULL
+								AND AFLEVERSTATUS LIKE '%" . $_UR ."%'
 								";
 
 
