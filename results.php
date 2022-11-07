@@ -82,7 +82,7 @@
 								
 								<!-- Uitsluitend recept-->
 								<div class="form-check-inline text-white mt-3">
-									<input name = "UR" class="form-check-input" type="checkbox" value="ja" id="Uitsluitend recept">
+									<input name = "UR" class="form-check-input" type="checkbox" value="Uitsluitend recept" id="Uitsluitend_recept">
 									<label class="form-check-label" for="uitsluitend_recept">
 										Uitsluitend recept
 									</label>
