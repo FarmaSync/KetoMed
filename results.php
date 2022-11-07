@@ -147,11 +147,18 @@
 								$_fvorm = $_GET["F_vorm"];
 								$_UR = $_GET["UR"];
 								$_ethanol = $_GET["ethanol"];
-								echo $_keyword;
-								echo $_tvorm;
-								echo $_fvorm;
-								echo $_UR;
-								echo $_ethanol;
+
+								$sql = "SELECT * FROM 'u219831890_ketomed'
+								WHERE PRODUCTNAAM LIKE '%'.$_keyword. '%'";
+
+								// run query & get results
+								$result = mysqli_query($conn, $sql);
+
+								//Fetch resulting rows as an array
+								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+								print_r($arrays);
+
 							?>
 
 
