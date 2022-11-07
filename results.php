@@ -169,7 +169,6 @@
 									<table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 										<thead>
 											<tr>
-												<!--<th><?php echo implode('</th><th>', array_keys((current($result)))) ?></th>-->
 												<th>Productnaam</th>
 												<th>Farmaceutische vorm</th>
 												<th>Toedieningsweg</th>
