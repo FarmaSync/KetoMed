@@ -10,7 +10,12 @@
 	<meta name="theme-name" content="KetoMed" />
 
 		<!-- ** CSS Plugins Needed for the Project ** -->
-
+		<script src=
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script src=
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+        </script>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
 		<!-- themefy-icon -->
@@ -22,21 +27,13 @@
 		<!-- Main Stylesheet -->
 		<link href="assets/style.css" rel="stylesheet" media="screen" />
 
-		<!--Stylesheet for table-->
-		<script src=
-            "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-            </script>
-		<link rel="stylesheet" 
-            type="text/css" href=
-            "https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
-
 		<!-- Own scripts-->
 		<script type="text/javascript">           
 			function showHideRow(row) 
 			{$("#" + row).toggle();}
 		</script>
 
-	<style>
+		<style>
             body {
                 margin: 0 auto;
                 padding: 0px;
