@@ -278,7 +278,7 @@
 												$_HULPSTOFFEN = $row["HULPSTOFFEN"];
 												$_AFLEVERSTATUS = $row["AFLEVERSTATUS"];
 
-												echo "<tr onclick=showHideRow('hidden_row$counter');>
+												echo "<tr onclick=showHideRow('hidden_row$counter') background-color: white;>
 														<td>$_PRODUCTNAAM</td>
 														<td>$_FARMACEUTISCHEVORM</td>
 														<td>$_TOEDIENINGSWEG</td>
