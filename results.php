@@ -273,7 +273,7 @@
 												</tr>";
 											$counter = 0;
 											while($row = $result->fetch_assoc())
-											{
+											{echo $row['PRODUCTNAAM'];
 												$counter++;
 												
 												$_PRODUCTNAAM = $row["PRODUCTNAAM"];
