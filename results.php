@@ -272,8 +272,9 @@
 													<th>Toedieningsweg</th>
 												</tr>";
 											$counter = 0;
-											while($row = $result->fetch_assoc())
-											{echo $row['PRODUCTNAAM'];
+											//while($row = $result->fetch_assoc())
+											foreach($result as $row)
+											{
 												$counter++;
 												
 												$_PRODUCTNAAM = $row["PRODUCTNAAM"];
