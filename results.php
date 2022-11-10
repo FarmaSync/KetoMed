@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-	<meta charset="utf-8">
-	<title>KetoMed</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <!-- theme meta -->
-  <meta name="theme-name" content="KetoMed" />
+	<head>
+		<meta charset="utf-8">
+		<title>KetoMed</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- theme meta -->
+	<meta name="theme-name" content="KetoMed" />
 
-	<!-- ** CSS Plugins Needed for the Project ** -->
+		<!-- ** CSS Plugins Needed for the Project ** -->
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-	<!-- themefy-icon -->
-	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-	<!--Favicon-->
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
-	<!-- fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-	<!-- Main Stylesheet -->
-	<link href="assets/style.css" rel="stylesheet" media="screen" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+		<!-- themefy-icon -->
+		<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+		<!--Favicon-->
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+		<!-- fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+		<!-- Main Stylesheet -->
+		<link href="assets/style.css" rel="stylesheet" media="screen" />
 
-	<!-- Own scripts-->
-	<script type="text/javascript">           
-        function showHideRow(row) 
-		{$("#" + row).toggle();}
-    </script>
+		<!-- Own scripts-->
+		<script type="text/javascript">           
+			function showHideRow(row) 
+			{$("#" + row).toggle();}
+		</script>
 
 
-</head>
+	</head>
 
-<body>
+	<body>
 	<!--Connect to database-->
 	<!-- header -->
 	<header class="banner overlay bg-cover" data-background="images/banner.jpg">
@@ -138,13 +138,14 @@
 	<!-- /header -->
 
 	<!-- call to action -->
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="section px-3 bg-white shadow text-center">
 						<h2 class="mb-4">Resultaten</h2>
 						<div id="results">
-							<?php 
+							<?php
 								include "connect.php";
 								$_keyword = $_GET["drug"];
 								$_tvorm = $_GET["T_weg"];
@@ -162,7 +163,8 @@
 
 
 								// run query & get results
-								$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
+								//$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
+								$result = $conn->query($sql);
 
 								//Fetch resulting rows as an array
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -177,44 +179,40 @@
 										
 										echo "<div>";
 											echo "<table>";
-											echo "
-												<tr>
-												<th>Productnaam</th>
-												<th>Farmaceutische vorm</th>
-												<th>Toedieningsweg</th>
+											echo "<tr>
+													<th>Productnaam</th>
+													<th>Farmaceutische vorm</th>
+													<th>Toedieningsweg</th>
 												</tr>";
 											$counter = 0;
 											while($row = $result -> fetch_assoc())
 											{
 												$counter++;
 												
-													$PRODUCTNAAM = $row['PRODUCTNAAM'];
-													$FARMACEUTISCHEVORM = $row['FARMACEUTISCHEVORM'];
-													$TOEDIENINGSWEG = $row['TOEDIENINGSWEG'];
-													$WERKZAMESTOFFEN = $row['WERKZAMESTOFFEN'];
-													$HULPSTOFFEN = $row['HULPSTOFFEN'];
-													$AFLEVERSTATUS = $row['AFLEVERSTATUS'];
+												$PRODUCTNAAM = $row["PRODUCTNAAM"];
+												$FARMACEUTISCHEVORM = $row["FARMACEUTISCHEVORM"];
+												$TOEDIENINGSWEG = $row["TOEDIENINGSWEG"];
+												$WERKZAMESTOFFEN = $row["WERKZAMESTOFFEN"];
+												$HULPSTOFFEN = $row["HULPSTOFFEN"];
+												$AFLEVERSTATUS = $row["AFLEVERSTATUS"];
 
-													echo "
-													<tr onclick=showHideRow('hidden_row$counter');>
-													<td>$PRODUCTNAAM</td>
-													<td>$FARMACEUTISCHEVORM</td>
-													<td>$TOEDIENINGSWEG</td>
+												echo "<tr onclick=showHideRow('hidden_row$counter');>
+														<td>$PRODUCTNAAM</td>
+														<td>$FARMACEUTISCHEVORM</td>
+														<td>$TOEDIENINGSWEG</td>
 													</tr>";
-												
-													echo "
-													<tr id='hidden_row$counter' class=hidden_row>
-													<td colspan=2>$WERKZAMESTOFFEN</td>
-													<td colspan=2>$HULPSTOFFEN</td>
-													<td colspan=2>$AFLEVERSTATUS</td>
+											
+												echo "<tr id='hidden_row$counter' class=hidden_row>
+														<td colspan=2>$WERKZAMESTOFFEN</td>
+														<td colspan=2>$HULPSTOFFEN</td>
+														<td colspan=2>$AFLEVERSTATUS</td>
 													</tr>";
 											}
 											echo "</table>";
 										echo "</div>";
-									}
-
-								?>
-					
+									} else {
+										echo "Geen ketoproof geneesmiddelen gevonden...";} 
+							?>
 						</div>
 
 					</div>
@@ -259,5 +257,4 @@
 	<!-- Main Script -->
 	<script src="assets/script.js"></script>
 </body>
-
 </html>
