@@ -214,7 +214,7 @@
 									echo "$num_rows resultaten voor '$_keyword'";
 									echo "<br><br>";
 									echo "<div id=wrapper>";
-											echo "<table id='table_detail'c lass='table table-striped table-bordered table-sm' cellspacing='0' width='100%' >";
+											echo "<table id='table_detail' class='table table-striped table-bordered table-sm' cellspacing='0' width='100%' >";
 											echo "<tr>
 													<th>Productnaam</th>
 													<th>Farmaceutische vorm</th>
