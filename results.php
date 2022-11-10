@@ -276,23 +276,23 @@
 											{
 												$counter++;
 												
-												$PRODUCTNAAM = $row["PRODUCTNAAM"];
-												$FARMACEUTISCHEVORM = $row["FARMACEUTISCHEVORM"];
-												$TOEDIENINGSWEG = $row["TOEDIENINGSWEG"];
-												$WERKZAMESTOFFEN = $row["WERKZAMESTOFFEN"];
-												$HULPSTOFFEN = $row["HULPSTOFFEN"];
-												$AFLEVERSTATUS = $row["AFLEVERSTATUS"];
+												$_PRODUCTNAAM = $row["PRODUCTNAAM"];
+												$_FARMACEUTISCHEVORM = $row["FARMACEUTISCHEVORM"];
+												$_TOEDIENINGSWEG = $row["TOEDIENINGSWEG"];
+												$_WERKZAMESTOFFEN = $row["WERKZAMESTOFFEN"];
+												$_HULPSTOFFEN = $row["HULPSTOFFEN"];
+												$_AFLEVERSTATUS = $row["AFLEVERSTATUS"];
 
 												echo "<tr onclick=showHideRow('hidden_row$counter');>
-														<td>$PRODUCTNAAM</td>
-														<td>$FARMACEUTISCHEVORM</td>
-														<td>$TOEDIENINGSWEG</td>
+														<td>$_PRODUCTNAAM</td>
+														<td>$_FARMACEUTISCHEVORM</td>
+														<td>$_TOEDIENINGSWEG</td>
 													</tr>";
 											
 												echo "<tr id='hidden_row$counter' class=hidden_row>
-														<td colspan=2>$WERKZAMESTOFFEN</td>
-														<td colspan=2>$HULPSTOFFEN</td>
-														<td colspan=2>$AFLEVERSTATUS</td>
+														<td colspan=2>$_WERKZAMESTOFFEN</td>
+														<td colspan=2>$_HULPSTOFFEN</td>
+														<td colspan=2>$_AFLEVERSTATUS</td>
 													</tr>";
 											}
 											echo "</table>";
