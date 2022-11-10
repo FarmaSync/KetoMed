@@ -285,9 +285,9 @@
 													</tr>";
 											
 												echo "<tr id='hidden_row$counter' class=hidden_row>
-														<td colspan=2>$_WERKZAMESTOFFEN</td>
-														<td colspan=2>$_HULPSTOFFEN</td>
-														<td colspan=2>$_AFLEVERSTATUS</td>
+														<td colspan=1>$_WERKZAMESTOFFEN</td>
+														<td colspan=1>$_HULPSTOFFEN</td>
+														<td colspan=1>$_AFLEVERSTATUS</td>
 													</tr>";
 											}
 											echo "</table>";
