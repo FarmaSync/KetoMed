@@ -209,10 +209,7 @@
 											echo "</table>";
 										echo "</div>";
 									}
-									else
-									{
-										echo "Geen resultaten voor '$_keyword' met toedieningsvorm '$form_toedieningsvorm'<br>";
-									}
+
 								?>
 					
 						</div>
