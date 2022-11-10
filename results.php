@@ -192,7 +192,7 @@
 													<th>Toedieningsweg</th>
 												</tr>";
 											$counter = 0;
-											while($row = $result -> fetch_assoc())
+											while($row = $result->fetch_assoc())
 											{
 												$counter++;
 												
