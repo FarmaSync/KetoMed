@@ -202,7 +202,7 @@
 												$WERKZAMESTOFFEN = $row["WERKZAMESTOFFEN"];
 												$HULPSTOFFEN = $row["HULPSTOFFEN"];
 												$AFLEVERSTATUS = $row["AFLEVERSTATUS"];
-
+												echo "$PRODUCTNAAM";
 												echo "<tr onclick=showHideRow('hidden_row$counter');>
 														<td>$PRODUCTNAAM</td>
 														<td>$FARMACEUTISCHEVORM</td>
@@ -212,7 +212,7 @@
 												echo "<tr id='hidden_row$counter' class=hidden_row>
 														<td colspan=2>$WERKZAMESTOFFEN</td>
 														<td colspan=2>$HULPSTOFFEN</td>
-														<!--<td colspan=2>$AFLEVERSTATUS</td>-->
+														<td colspan=2>$AFLEVERSTATUS</td>
 													</tr>";
 											}
 											echo "</table>";
