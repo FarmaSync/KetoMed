@@ -177,9 +177,9 @@
 								//Fetch resulting rows as an array
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								//echo $_keyword;
-								//print_r($arrays) ; ?>
+								//print_r($arrays) ;
 								
-								<?php if ($result -> num_rows>0)
+								if ($result -> num_rows>0)
 								{
 									$num_rows = $result->num_rows;
 									echo "$num_rows resultaten voor '$_keyword'";
