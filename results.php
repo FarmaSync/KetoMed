@@ -22,8 +22,11 @@
 	<!-- Main Stylesheet -->
 	<link href="assets/style.css" rel="stylesheet" media="screen" />
 
-	<!-- Own CSS-->
-	
+	<!-- Own scripts-->
+	<script type="text/javascript">           
+        function showHideRow(row) 
+		{$("#" + row).toggle();}
+    </script>
 
 
 </head>
