@@ -165,23 +165,21 @@
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								//echo $_keyword;
 								//print_r($arrays) ;
-								?>
-								<?php if ($result -> num_rows >0): ?>
-									<table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-										<thead>
-											<tr>
+								
+								if ($result -> num_rows >0):
+									{
+										$num_rows = $result->num_rows;
+										echo "$num_rows resultaten voor '$_keyword'";
+										echo "<br><br>";
+										
+										echo "<div>";
+											echo "<table>";
+											echo "
+												<tr>
 												<th>Productnaam</th>
 												<th>Farmaceutische vorm</th>
 												<th>Toedieningsweg</th>
-												<!--
-												<th>Werkzame stoffen</th>
-												<th>Hulpstoffen</th>
-												<th>Afleverstatus</th> 
-												-->
-											</tr>
-										</thead>
-										<tbody>
-										<?php 
+												</tr>";
 											$counter = 0;
 											while($row = $result -> fetch_assoc())
 											{
@@ -207,12 +205,15 @@
 													<td colspan=2>$HULPSTOFFEN</td>
 													<td colspan=2>$AFLEVERSTATUS</td>
 													</tr>";
-
-
 											}
-										?>
-
-									</table>
+											echo "</table>";
+										echo "</div>";
+									}
+									else
+									{
+										echo "Geen resultaten voor '$_keyword' met toedieningsvorm '$form_toedieningsvorm'<br>";
+									}
+								?>
 					
 						</div>
 
