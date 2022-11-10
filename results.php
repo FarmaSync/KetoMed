@@ -212,7 +212,7 @@
 												echo "<tr id='hidden_row$counter' class=hidden_row>
 														<td colspan=2>$WERKZAMESTOFFEN</td>
 														<td colspan=2>$HULPSTOFFEN</td>
-														<td colspan=2>$AFLEVERSTATUS</td>
+														<!--<td colspan=2>$AFLEVERSTATUS</td>-->
 													</tr>";
 											}
 											echo "</table>";
