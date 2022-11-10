@@ -171,6 +171,14 @@
 								//echo $_keyword;
 								//print_r($arrays) ; ?>
 								
+								<?php 
+								if ($result -> num_rows >0):
+									{
+										$num_rows = $result -> num_rows;
+										echo"$num_rows resultaten voor '$_keyword'";
+									}
+								?>
+
 						</div>
 
 					</div>
