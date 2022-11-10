@@ -57,13 +57,7 @@
             #wrapper h1 p {
                 font-size: 20px;
             }
-            #table_detail {
-                width: 500px;
-                text-align: left;
-                border-collapse: collapse;
-                color: #2E2E2E;
-                border: #A4A4A4;
-            }
+
             #table_detail tr:hover {
                 background-color: #F2F2F2;
             }
