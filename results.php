@@ -250,24 +250,23 @@
 								AND AFLEVERSTATUS LIKE '%" . $_UR ."%'
 								";
 
-
 								// run query & get results
-								//$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
-								$result = $conn->query($sql);
+								$result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
+								//$result = $conn->query($sql);
 
 								//Fetch resulting rows as an array
 								$arrays = mysqli_fetch_all($result, MYSQLI_ASSOC);
 								//echo $_keyword;
 								//print_r($arrays) ;
 								
-								if ($result -> num_rows>0)
+								if ($result->num_rows>0)
 								{
 									$num_rows = $result->num_rows;
 									echo "$num_rows resultaten voor '$_keyword'";
 									echo "<br><br>";
-									echo "<div>";
-											echo "<table id='wrapper' >";
-											echo "<tr border=1 id='table_detail' cellpadding=10>
+									echo "<div id=wrapper>";
+											echo "<table border=1 id='table_detail' cellpadding=10  >";
+											echo "<tr>
 													<th>Productnaam</th>
 													<th>Farmaceutische vorm</th>
 													<th>Toedieningsweg</th>
