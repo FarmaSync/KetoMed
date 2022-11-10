@@ -161,7 +161,7 @@
 								$_UR = $_GET["UR"];
 								$_ethanol = $_GET["ethanol"];
 
-								$sql = "SELECT PRODUCTNAAM, FARMACEUTISCHEVORM, TOEDIENINGSWEG, WERKZAMESTOFFEN, HULPSTOFFEN, AFLEVERSTATUS
+								$sql = "SELECT *
 								FROM cbg_labeled_20221107_d WHERE WERKZAMESTOFFEN LIKE '%" . $_keyword ."%'
 								AND TOEDIENINGSWEG LIKE '%" . $_tvorm ."%'
 								AND FARMACEUTISCHEVORM LIKE '%" . $_fvorm ."%'
