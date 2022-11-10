@@ -12,20 +12,16 @@
 		<!-- ** CSS Plugins Needed for the Project ** -->
 		<script src=
             "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-        </script>
-        <script src=
+            </script>
+            <script src=
             "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
-        </script>
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-		<!-- themefy-icon -->
-		<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-		<!--Favicon-->
-		<link rel="icon" href="images/favicon.png" type="image/x-icon">
-		<!-- fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-		<!-- Main Stylesheet -->
-		<link href="assets/style.css" rel="stylesheet" media="screen" />
+            </script>
+            <link rel="stylesheet" href=
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+            <link rel="stylesheet" 
+            type="text/css" href=
+            "https://use.fontawesome.com/releases/v5.6.3/css/all.css">        
+            <script type="text/javascript"> 
 
 		<!-- Own scripts-->
 		<script type="text/javascript">           
