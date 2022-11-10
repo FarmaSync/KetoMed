@@ -265,7 +265,7 @@
 									echo "$num_rows resultaten voor '$_keyword'";
 									echo "<br><br>";
 									echo "<div id=wrapper>";
-											echo "<table>";
+											echo "<table id='table_detail' >";
 											echo "<tr>
 													<th>Productnaam</th>
 													<th>Farmaceutische vorm</th>
