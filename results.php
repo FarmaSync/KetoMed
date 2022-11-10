@@ -22,6 +22,10 @@
 		<!-- Main Stylesheet -->
 		<link href="assets/style.css" rel="stylesheet" media="screen" />
 
+		<!--Stylesheet for table-->
+		<script src=
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            </script>
 		<!-- Own scripts-->
 		<script type="text/javascript">           
 			function showHideRow(row) 
@@ -177,8 +181,8 @@
 									echo "$num_rows resultaten voor '$_keyword'";
 									echo "<br><br>";
 									echo "<div>";
-											echo "<table>";
-											echo "<tr>
+											echo "<table id='wrapper' >";
+											echo "<tr border=1 id='table_detail' cellpadding=10>
 													<th>Productnaam</th>
 													<th>Farmaceutische vorm</th>
 													<th>Toedieningsweg</th>
