@@ -173,19 +173,44 @@
 												<th>Productnaam</th>
 												<th>Farmaceutische vorm</th>
 												<th>Toedieningsweg</th>
+												<!--
 												<th>Werkzame stoffen</th>
 												<th>Hulpstoffen</th>
-												<th>Afleverstatus</th>
+												<th>Afleverstatus</th> 
+												-->
 											</tr>
 										</thead>
 										<tbody>
-										<?php foreach($result as $row): array_map('htmlentities', $row); ?>
-											<tr>
-												<td ><?php echo implode('</td><td>', $row); ?></td>
-											</tr>
-										<?php endforeach; ?>
-										</tbody>
-										<?php endif; ?>
+										<?php 
+											$counter = 0;
+											while($row = $result -> fetch_assoc())
+											{
+												$counter++;
+												
+													$PRODUCTNAAM = $row['PRODUCTNAAM'];
+													$FARMACEUTISCHEVORM = $row['FARMACEUTISCHEVORM'];
+													$TOEDIENINGSWEG = $row['TOEDIENINGSWEG'];
+													$WERKZAMESTOFFEN = $row['WERKZAMESTOFFEN'];
+													$HULPSTOFFEN = $row['HULPSTOFFEN'];
+													$AFLEVERSTATUS = $row['AFLEVERSTATUS'];
+
+													echo "
+													<tr onclick=showHideRow('hidden_row$counter');>
+													<td>$PRODUCTNAAM</td>
+													<td>$FARMACEUTISCHEVORM</td>
+													<td>$TOEDIENINGSWEG</td>
+													</tr>";
+												
+													echo "
+													<tr id='hidden_row$counter' class=hidden_row>
+													<td colspan=2>$WERKZAMESTOFFEN</td>
+													<td colspan=2>$HULPSTOFFEN</td>
+													<td colspan=2>$AFLEVERSTATUS</td>
+													</tr>";
+
+
+											}
+										?>
 
 									</table>
 					
